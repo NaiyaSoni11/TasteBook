@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TasteBook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🍲 TasteBook</h1>
+
+    <input type="text" id="searchBox" placeholder="Search recipes...">
+
+    <div class="filter-buttons">
+
+        <button onclick="filterRecipes('all')">All</button>
+        <button onclick="filterRecipes('Indian')">Indian</button>
+        <button onclick="filterRecipes('Fast Food')">Fast Food</button>
+        <button onclick="filterRecipes('Beverage')">Beverage</button>
+        <button onclick="filterRecipes('Chinese')">Chinese</button>
+
+    </div>
+
+    <div class="add-recipe-form">
+
+        <h2>Add Your Own Recipe</h2>
+
+        <input type="text" id="recipeName" placeholder="Recipe Name">
+
+        <input type="text" id="recipeCategory" placeholder="Category">
+
+        <input type="text" id="recipeIngredients" placeholder="Ingredients">
+
+        <textarea id="recipeSteps" placeholder="Cooking Steps"></textarea>
+
+        <input type="file" id="recipeImage" accept="image/*">
+
+        <button id="addRecipeBtn">Add Recipe</button>
+
+    </div>
+
+    <div class="recipe-container" id="recipeContainer">
+
+        <!-- Tea -->
+        <div class="recipe-card" data-category="Beverage">
+
+            <img src="tea.jpg" alt="Tea">
+
+            <h2>Tea</h2>
+
+            <p><strong>Category:</strong> Beverage</p>
+
+            <p><strong>Ingredients:</strong> Milk, Tea Powder, Sugar, Water</p>
+
+            <p><strong>Steps:</strong> Boil water and milk together. Add tea powder and sugar. Simmer for 2 minutes and serve hot.</p>
+
+        </div>
+
+        <!-- Maggi -->
+        <div class="recipe-card" data-category="Fast Food">
+
+            <img src="maggi.jpg" alt="Maggi">
+
+            <h2>Maggi</h2>
+
+            <p><strong>Category:</strong> Fast Food</p>
+
+            <p><strong>Ingredients:</strong> Maggi Noodles, Water, Tastemaker</p>
+
+            <p><strong>Steps:</strong> Boil water, add noodles and tastemaker, cook for 2-3 minutes and serve hot.</p>
+
+        </div>
+
+        <!-- Poha -->
+        <div class="recipe-card" data-category="Indian">
+
+            <img src="poha.jpg" alt="Poha">
+
+            <h2>Poha</h2>
+
+            <p><strong>Category:</strong> Indian</p>
+
+            <p><strong>Ingredients:</strong> Flattened Rice, Onion, Peanuts, Spices</p>
+
+            <p><strong>Steps:</strong> Saute onions and peanuts, add spices and poha, cook for few minutes and garnish with coriander.</p>
+
+        </div>
+
+        <!-- Dal Fry -->
+        <div class="recipe-card" data-category="Indian">
+
+            <img src="dalfry.jpg" alt="Dal Fry">
+
+            <h2>Dal Fry</h2>
+
+            <p><strong>Category:</strong> Indian</p>
+
+            <p><strong>Ingredients:</strong> Toor Dal, Onion, Tomato, Garlic, Spices</p>
+
+            <p><strong>Steps:</strong> Cook dal, prepare masala with onion and tomato, mix together and simmer for 5 minutes.</p>
+
+        </div>
+
+        <!-- Momos -->
+        <div class="recipe-card" data-category="Fast Food">
+
+            <img src="momos.jpg" alt="Momos">
+
+            <h2>Momos</h2>
+
+            <p><strong>Category:</strong> Fast Food</p>
+
+            <p><strong>Ingredients:</strong> Flour, Vegetables, Spices</p>
+
+            <p><strong>Steps:</strong> Prepare stuffing, fill dough wrappers, steam for 10 minutes and serve with chutney.</p>
+
+        </div>
+
+        <!-- Manchurian -->
+        <div class="recipe-card" data-category="Chinese">
+
+            <img src="manchurian.jpg" alt="Manchurian">
+
+            <h2>Manchurian</h2>
+
+            <p><strong>Category:</strong> Chinese</p>
+
+            <p><strong>Ingredients:</strong> Cabbage, Carrot, Flour, Sauces</p>
+
+            <p><strong>Steps:</strong> Make vegetable balls, fry them, prepare sauce and mix together.</p>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="popup" id="recipePopup">
+
+    <div class="popup-content">
+
+        <span id="closePopup">&times;</span>
+
+        <img id="popupImage" src="" alt="Recipe Image">
+
+        <h2 id="popupTitle"></h2>
+
+        <p id="popupCategory"></p>
+
+        <p id="popupIngredients"></p>
+
+        <p id="popupSteps"></p>
+
+    </div>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
